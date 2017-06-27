@@ -1,0 +1,12 @@
+1.创建Git仓库
+    git init //初始化一个仓库
+    git add <file> //添加文件，添加当前目录全部文件可用：git add -A
+    git commit  //完成提交  
+    git commit -m "xxx" //提交并写版本信息
+
+2.Git命令
+    git status  //查看仓库当前状态
+    git diff <file>  //查看修改
+    git log  //查看提交历史，以确定回退到哪个版本
+    git reflog  //查看命令历史，以确定回到未来哪个版本
+
