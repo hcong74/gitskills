@@ -11,9 +11,22 @@
     git reflog  //查看命令历史，以确定回到未来哪个版本
     git log --pretty=oneline
     git rm <file>  //从版本库中删除文件
+    git checkout -- <file>  //
 
 3.Git撤销修改
     git checkout -- <file>  //(修改工作区)撤销修改回到添加到暂存区后的状态
     git reset HEAD <file>  //(修改缓存区)可以把暂存区的修改撤销
     git reset --hard commit_id  //(修改版本)可在历史版本穿梭
-    
+
+4.Git远程库操作
+    git remote add origin git@github.com:hcong74/gitskills.git  //关联远程库与当前目录
+    git push -u origin master  //本地库的所有内容推送到远程库 git push origin master
+    git clone git@github.com:hcong74/gitskills.git  //远程克隆至本地
+
+4.分支管理
+    git checkout -b dev  //创建分支dev，并切换到dev分支 git branch dev / git checkout dev
+    git branch  //查看当前分支
+    git merge dev  //合并指定分支(dev)到当前分支
+    git branch -d dev  //删除分支dev
+
+    Creating a branch is quick & simple
