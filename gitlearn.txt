@@ -1,3 +1,6 @@
+ssh-keygen -t rsa -C "276492271@qq.com"  //创建SSH Key，在根目录下，.ssh目录下生成id_rsa和id_rsa.pub两个文件。id_rsa是私钥，id_rsa.pub是公钥。登入GitHub，Key文本框粘贴id_rsa.pub文件内容。确认只有自己才可以推送。
+
+
 1.创建Git仓库
     git init //初始化一个仓库
     git add <file> //添加文件，添加当前目录全部文件可用：git add -A
@@ -36,5 +39,25 @@
     (2).git stash pop    //恢复的同时也把stash删除
     git branch -D <name>  //没有被合并过的分支，强制删除方法
     git remote  //查看远程库的信息
+    git checkout -b branch-name origin/branch-name  //本地创建和远程分支对应的分支
+    git branch --set-upstream branch-name origin/branch-name  //建立本地分支和远程分支的关联
+    git pull  //从远程抓取分支
+
+5.标签管理
+    git tag v1.0  //打标签
+    git tag  //查看所有标签
+    git log --pretty=oneline --abbrev-commit  //查看commit id
+    git tag v0.9 commit-id  
+    git show v0.9
+    git tag -a v0.1 -m "version 0.1 released" 3628164  //创建带有说明得标签 -a 指定标签名 -m 指定说明文字
+    git tag -s v0.2 -m "signed version 0.2 relesded" fec145a  //通过 -s 用私钥签名一个标签
+    git tag -d v0.1  //标签打错，可删除
+    //标签只存储在本地，不会自动推送到远程.如果要推送某个标签到远程，使用命令：
+    git push origin <tagname>
+    git push origin --tags  //一次性推送全部尚未推送到远程的本地标签
+    删除远程标签步骤：
+    (1).git tag -d tagname  //首先删除本地标签
+    (2).git push origin :ref/tags/tagname  //然后远程删除
     
-    远程库分支测试
+    
+    
