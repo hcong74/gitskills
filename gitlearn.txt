@@ -27,6 +27,13 @@
     git checkout -b dev  //创建分支dev，并切换到dev分支 git branch dev / git checkout dev
     git branch  //查看当前分支
     git merge dev  //合并指定分支(dev)到当前分支
+    git merge --no-ff dev  //可保存之前的分支历史
     git branch -d dev  //删除分支dev
-
-    Creating a new branch is quick and simple
+    git stash  //吧当前工作现场存储起来，转换分支，之后回来恢复
+    git stash list  //查看stash内容
+    恢复现场方法：
+    (1).git stash apply  //恢复现场，但stash内容并不删除，需用 git stash drop 来删除
+    (2).git stash pop    //恢复的同时也把stash删除
+    git branch -D <name>  //没有被合并过的分支，强制删除方法
+    git remote  //查看远程库的信息
+    
