@@ -29,4 +29,4 @@
     git merge dev  //合并指定分支(dev)到当前分支
     git branch -d dev  //删除分支dev
 
-    Creating a branch is quick & simple
+    Creating a new branch is quick and simple
